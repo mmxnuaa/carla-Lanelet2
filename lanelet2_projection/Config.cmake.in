@@ -1,0 +1,21 @@
+
+#include(CMakeFindDependencyMacro)
+
+# Capturing values from configure (optional)
+#set(my-config-var @my-config-var@)
+
+# Same syntax as find_package
+find_package(Boost CONFIG REQUIRED)
+find_package(lanelet2_core REQUIRED)
+
+# Any extra setup
+
+# Add the targets file
+#include("${CMAKE_CURRENT_LIST_DIR}/lanelet2_coreTargets.cmake")
+
+
+@PACKAGE_INIT@
+
+include("${CMAKE_CURRENT_LIST_DIR}/@PROJECT_NAME@Targets.cmake")
+
+check_required_components(@PROJECT_NAME@)
