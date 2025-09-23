@@ -1,3 +1,4 @@
+#include <string>
 #include "lanelet2_projection/UTM.h"
 
 #include <GeographicLib/UTMUPS.hpp>
