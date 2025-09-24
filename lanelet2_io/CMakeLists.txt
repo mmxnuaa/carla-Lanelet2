@@ -10,14 +10,14 @@ file(GLOB_RECURSE sources src/*.cpp)
 add_library(${PROJECT_NAME} ${sources})
 add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
-find_package(Boost CONFIG REQUIRED)
+find_package(Boost CONFIG REQUIRED serialization filesystem)
 find_package(pugixml CONFIG REQUIRED)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
-target_link_libraries(${PROJECT_NAME} Boost::headers)
+target_link_libraries(${PROJECT_NAME} Boost::headers Boost::serialization Boost::filesystem)
 target_link_libraries(${PROJECT_NAME} lanelet2_core::lanelet2_core)
 target_link_libraries(${PROJECT_NAME} pugixml::pugixml)
 

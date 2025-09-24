@@ -5,7 +5,7 @@
 #set(my-config-var @my-config-var@)
 
 # Same syntax as find_package
-find_package(Boost CONFIG REQUIRED)
+find_package(Boost CONFIG REQUIRED serialization filesystem)
 find_package(lanelet2_core REQUIRED)
 
 # Any extra setup
