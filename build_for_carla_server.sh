@@ -29,6 +29,7 @@ cd build
 PKG_PATH="${CARLA_BUILD_FOLDER}/boost-1.86.0-server-install/lib/cmake"
 PKG_PATH="${CARLA_BUILD_FOLDER}/geographiclib-2.5.2-server-install/lib/cmake:${PKG_PATH}"
 PKG_PATH="${CARLA_BUILD_FOLDER}/pugixml-1.15-server-install/lib/cmake:${PKG_PATH}"
+PKG_PATH="${CARLA_BUILD_FOLDER}/eigen-3.4.1-server-install/share/eigen3/cmake:${PKG_PATH}"
 
 echo PKG_PATH="${PKG_PATH}"
 
